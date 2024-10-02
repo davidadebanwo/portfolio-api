@@ -24,6 +24,10 @@ const messageSchema = new mongoose.Schema({
 
 const Message = mongoose.model('Message', messageSchema);
 
+app.get('/', (req, res) => {
+    res.send('Hello')
+})
+
 // Route to handle form submission
 app.post('/api/contact', async (req, res) => {
     console.log(req.body);
